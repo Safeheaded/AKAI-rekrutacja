@@ -1,0 +1,101 @@
+body {
+  font-family: "Cute Font", cursive;
+}
+
+.wrapper {
+  width: 450px;
+  margin: auto;
+  transition: filter 1s;
+}
+
+.action-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset {
+  height: 30px;
+  font-size: 20px;
+}
+
+.turn {
+  font-size: 45px;
+  text-align: center;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
+  border: 5px solid black;
+}
+
+.tile {
+  box-sizing: border-box;
+  border: 5px solid black;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-x:before {
+  font-size: 200px;
+  content: "X";
+  line-height: 1;
+  color: crimson;
+}
+
+.tile-o:before {
+  font-size: 200px;
+  content: "O";
+  line-height: 1;
+  color: teal;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 130px;
+  flex-direction: column;
+  animation-name: winScreen;
+  animation-duration: 1s;
+  opacity: 0.8
+}
+
+.blur {
+  filter: blur(15px);
+}
+
+.reset-button {
+  outline: none;
+  border: none;
+  background-color: white;
+  width: 250px;
+  height: 100px;
+  color: #000;
+  font-size: 50px;
+  border-radius: 35px;
+  transition: background-color 1s, color 1s;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+  background-color: rgb(85, 85, 85);
+  color: white
+}
+
+@keyframes winScreen {
+  from {opacity: 0;}
+  to {opacity: 0.8}
+}
